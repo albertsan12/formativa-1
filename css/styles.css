@@ -93,3 +93,17 @@ img {
 .texto-header p, h1, h2, div {
   margin: 4rem 0;
 }
+
+.valores {
+  background-color: #003366;
+}
+
+.valores-contenido {
+  background-color: white;
+}
+
+.contenido{
+  display: flex;
+
+}
+
