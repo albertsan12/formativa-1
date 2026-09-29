@@ -1,3 +1,369 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+
+    /*rem*/
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem; /* 1rem -> 10px */
 }
+
+img {
+  max-width: 100%;
+}
+
+.navbar {
+  display: flex; /*colocamos todos los hijos de nav en */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items li{
+  list-style: none;
+  margin-left: 1.5rem;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}
+
+.container {
+  width: 140rem;
+  margin: 0 auto;
+}
+
+.logo-navbar {
+  width: 10rem;
+  height: 10rem;
+}
+
+.btn {
+  text-decoration: none;
+  color: #003366;
+  padding: 1.5rem 2rem;
+  border-radius: 9rem;
+}
+
+.btn-amarillo {
+  background-color: #fa0;
+}
+
+.hero {
+  background-image: url(../img/banner.png);
+  height: 60rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.subtitulo {
+  color: #fa0;
+  font-size: 2.5rem;
+}
+
+.texto-blanco{
+  color: white;
+}
+
+.texto-verde {
+  color:#a3d9a5;
+}
+
+.btn-blanco{
+  color: white;
+  border: solid white;
+}
+
+.texto-header {
+  padding: 20rem 0;
+}
+
+.texto-header p, h1, h2, div {
+  margin: 4rem 0;
+}
+
+/* --- SUBTÍTULO BASE --- */
+.subtitulo {
+  font-size: 1.4rem;         /* Tamaño de letra del subtítulo (14px) */
+  font-weight: bold;         /* Aplica texto en negrita */
+  text-transform: uppercase; /* Fuerza a que se muestre en mayúsculas */
+  margin-bottom: 1rem;       /* Margen exterior inferior: empuja el h2 hacia abajo 10px */
+}
+
+/* --- CLASE DE COLOR AMARILLO --- */
+.texto-amarillo {
+  color: #fa0;               /* Color amarillo de la paleta corporativa */
+}
+
+/* --- CONTENEDOR PRINCIPAL CENTRADO --- */
+.container-nosotros {
+  display: flex;             /* Flexbox para alinear el bloque de texto y la imagen de lado a lado */
+  align-items: center;       /* Centra verticalmente el texto respecto a la imagen */
+  max-width: 90rem;          /* Limita el ancho máximo a 900px para juntarlo al centro */
+  margin-left: auto;         /* Centra el contenedor horizontalmente a la izquierda */
+  margin-right: auto;        /* Centra el contenedor horizontalmente a la derecha */
+  gap: 5rem;                 /* Espacio/distancia directa entre la columna de texto y la imagen (50px) */
+  padding-top: 6rem;         /* Relleno interno superior: 60px de espacio libre por DENTRO arriba */
+  padding-bottom: 6rem;      /* Relleno interno inferior: 60px de espacio libre por DENTRO abajo */
+}
+
+/* --- COLUMNA DE TEXTO --- */
+.nosotros-texto {
+  flex: 1;                   /* Reparte el espacio: 50% de ancho para el texto */
+}
+
+/* --- TÍTULO H2 --- */
+.container-nosotros h2 {
+  font-size: 3.2rem;         /* Tamaño grande destacado para el título (32px) */
+  color: #003366;            /* Azul corporativo de la paleta */
+  margin-bottom: 1.5rem;     /* Margen exterior inferior: separa el h2 del primer párrafo por 15px */
+}
+
+/* --- PÁRRAFOS DE TEXTO --- */
+.nosotros-texto p {
+  font-size: 1.4rem;         /* Tamaño de fuente del texto (14px) */
+  line-height: 1.5;          /* Interlineado de 1.5 entre líneas de texto */
+  margin-bottom: 1.5rem;     /* Margen exterior inferior: separa un párrafo del otro por 15px */
+}
+
+/* --- COLUMNA DE LA IMAGEN --- */
+.nosotros-img {
+  flex: 1;                   /* Reparte el espacio: 50% de ancho para la imagen */
+}
+
+/* --- IMAGEN CON BORDES REDONDEADOS --- */
+.nosotros-img img {
+  width: 100%;               /* Asegura que la imagen se adapte al ancho de su columna */
+  border-radius: 2rem;       /* Redondea las esquinas de la imagen (20px) */
+}
+
+/*---inicio valor diferencial---*/
+
+.diferencial {
+  background-color: #003366;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.diferencial-contenido {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.texto-blanco {
+  color: #ffffff;
+}
+
+.diferencial-contenido h2 {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+}
+
+.diferencial-cards {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 3rem 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.card-numero {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  color: #666666;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/*---fin valor diferencial---*/
+
+/*---inicio servicio---*/
+.servicios-contenido {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicios-contenido h2 {
+  font-size: 3.2rem;
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+
+.servicios-descripcion {
+  color: #555555;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 55rem;
+  margin-bottom: 4rem;
+}
+
+.servicios-cards {
+  display: flex;
+  gap: 2.5rem;
+}
+.card-servicio {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 3rem 2.5rem;
+  border-radius: 1.5rem;
+  border: 0.1rem solid #e0e0e0;
+}
+
+.icono-box {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.icono-box.verde {
+  background-color: #a3d9a5;
+}
+
+.card-servicio h3 {
+  font-size: 1.8rem;
+  color:#003366;
+  margin-bottom: 1.5rem;
+}
+
+.card-servicio p {
+  color: #666666;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.card-servicio li {
+  color: #555555;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+/*---fin servicio---*/
+
+/*---inicio cobertura---*/
+.cobertura {
+  background-color: #e5e5e5;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.cobertura-contenido {
+  display: flex;
+  align-items: center;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 5rem;
+}
+
+.cobertura-texto {
+  flex: 1;
+}
+
+.cobertura-texto h2 {
+  font-size: 3.2rem;
+  color: #003366;
+  margin-top: 2rem;
+  line-height: 1.2;
+}
+
+.cobertura-descripcion {
+  color: #555555;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.cobertura-lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cobertura-lista li {
+  color: #555555;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cobertura-lista li span {
+  color: #003366;
+  font-weight: bold;
+}
+
+.cobertura-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 4rem 3.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.05);
+}
+
+.cobertura-card h3 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+
+.cobertura-card p {
+  color: #666666;
+  margin-bottom: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.ciudades-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pill {
+  background-color: #003366;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5rem;
+}
+
+
+
+
+
